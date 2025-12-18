@@ -10,16 +10,17 @@ import Newsletter from "../Common/Newsletter";
 
 const Home = () => {
   return (
-    <main>
-      <Hero />
-      <Categories />
-      <NewArrival />
-      <PromoBanner />
-      <BestSeller />
-      <CounDown />
-      <Testimonials />
-      <Newsletter />
-    </main>
+    <main className="pt-32 sm:pt-40 lg:pt-48 xl:pt-56">  {/* Add this class */}
+  <Hero />
+  <Categories />
+  <NewArrival />
+  <PromoBanner />
+  <BestSeller />
+  <CounDown />
+  <Testimonials />
+  <Newsletter />
+</main>
+  
   );
 };
 
