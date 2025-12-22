@@ -38,7 +38,7 @@ const HeroCarousel = () => {
             </div>
 
             <h1 className="font-playfair text-3xl sm:text-5xl text-gray-900 mb-6 leading-tight">
-              <Link href="/product/signature">Veloura Noir Elixir</Link>
+              <Link href="/product/signature">Veloura  Elixir</Link>
             </h1>
 
             <p className="text-gray-600 text-base sm:text-lg mb-10 font-montserrat leading-relaxed">
@@ -55,7 +55,7 @@ const HeroCarousel = () => {
 
           <div className="flex justify-center lg:justify-end">
             <Image
-              src="https://www.rioperfumes.co.za/cdn/shop/files/arabian-knight-eau-de-parfum-100ml-arabian-oud-perfume_998x_a571da0e-95b6-4a6a-ae70-4c1a3e7488db.jpg?v=1705610957"
+              src="https://thehoughtonhotel.com/wp-content/uploads/2024/02/Oud-Elixir-2.png"
               alt="Veloura Noir Elixir - Luxury Perfume"
               width={450}
               height={550}
@@ -98,7 +98,7 @@ const HeroCarousel = () => {
 
           <div className="flex justify-center lg:justify-end">
             <Image
-              src="https://m.media-amazon.com/images/I/71sF+GMq6cL._AC_SL1500_.jpg"
+              src="https://media.self.com/photos/623a2356ccec741c41b57d5e/3:4/w_748%2Cc_limit/Maison%2520Louis%2520Marie%2520No.%252004%2520Bois%2520de%2520Balincourt%2520Perfume%2520Gift%2520Set.jpg"
               alt="Veloura Women's Fragrance"
               width={450}
               height={550}
@@ -136,7 +136,7 @@ const HeroCarousel = () => {
 
           <div className="flex justify-center lg:justify-end">
             <Image
-              src="https://m.media-amazon.com/images/I/81f4z7Y0gFL._AC_SL1500_.jpg"
+              src="https://faunwalk.com/cdn/shop/files/luxury-unisex-perfume-gift-set-4-x-20mls-blvgari-tygar-narciso-rodriguez-for-her-dg-light-blue-gucci-oud-793935.jpg?v=1755340680"
               alt="Veloura Luxury Gift Set"
               width={450}
               height={550}
