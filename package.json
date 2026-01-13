@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "next-commerce-community",
   "version": "0.1.0",
   "private": true,
@@ -33,4 +34,17 @@
     "eslint-config-next": "15.2.3",
     "typescript": "5.2.2"
   }
+=======
+  "name": "veloura-fragrances",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+>>>>>>> d78f3f36ec906db5937c4ff0500dfb3acda9d19e
 }
