@@ -3,47 +3,50 @@ import Image from "next/image";
 
 const Newsletter = () => {
   return (
-    <section className="overflow-hidden">
-      <div className="max-w-[1170px] mx-auto px-4 sm:px-8 xl:px-0">
-        <div className="relative z-1 overflow-hidden rounded-xl">
-          {/* <!-- bg shapes --> */}
+    <section className="overflow-hidden py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+          {/* Background Image with Overlay */}
           <Image
-            src="/images/shapes/newsletter-bg.jpg"
-            alt="background illustration"
-            className="absolute -z-1 w-full h-full left-0 top-0 rounded-xl"
+            src="https://images.unsplash.com/photo-1606857521015-7f9fcf423740?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" // Elegant fragrance-inspired bg (replace with your preferred)
+            alt="Veloura Newsletter Background"
+            className="absolute inset-0 w-full h-full object-cover"
             width={1170}
-            height={200}
+            height={300}
+            priority
           />
-          <div className="absolute -z-1 max-w-[523px] max-h-[243px] w-full h-full right-0 top-0 bg-gradient-1"></div>
 
-          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8 px-4 sm:px-7.5 xl:pl-12.5 xl:pr-14 py-11">
-            <div className="max-w-[491px] w-full">
-              <h2 className="max-w-[399px] text-white font-bold text-lg sm:text-xl xl:text-heading-4 mb-3">
-                Don&apos;t Miss Out Latest Trends & Offers
+          {/* Dark Gradient Overlay for Readability */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/30" />
+
+          {/* Content */}
+          <div className="relative z-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-10 px-8 md:px-16 py-16 lg:py-20">
+            {/* Left: Text */}
+            <div className="max-w-xl">
+              <h2 className="font-playfair text-3xl md:text-4xl lg:text-5xl text-white font-semibold mb-4 leading-tight">
+                Stay in the Scent
               </h2>
-              <p className="text-white">
-                Register to receive news about the latest offers & discount
-                codes
+              <p className="text-white/90 font-montserrat text-lg md:text-xl max-w-md">
+                Subscribe for exclusive fragrance releases, limited-edition drops, and insider offers.
               </p>
             </div>
 
-            <div className="max-w-[477px] w-full">
-              <form>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <input
-                    type="email"
-                    name="email"
-                    id="email"
-                    placeholder="Enter your email"
-                    className="w-full bg-gray-1 border border-gray-3 outline-none rounded-md placeholder:text-dark-4 py-3 px-5"
-                  />
-                  <button
-                    type="submit"
-                    className="inline-flex justify-center py-3 px-7 text-white bg-blue font-medium rounded-md ease-out duration-200 hover:bg-blue-dark"
-                  >
-                    Subscribe
-                  </button>
-                </div>
+            {/* Right: Form */}
+            <div className="w-full lg:max-w-md">
+              <form className="flex flex-col sm:flex-row gap-4">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Your email address"
+                  className="w-full py-4 px-6 rounded-full bg-white/10 border border-white/20 text-white placeholder:text-white/60 outline-none focus:border-velourGold focus:ring-2 focus:ring-velourGold/30 transition-all duration-300 backdrop-blur-sm"
+                />
+                <button
+                  type="submit"
+                  className="inline-flex justify-center items-center font-montserrat font-medium text-velourBlack bg-velourGold px-10 py-4 rounded-full hover:bg-velourDarkGold transition-all duration-300 shadow-lg hover:shadow-xl whitespace-nowrap"
+                >
+                  Subscribe Now
+                </button>
               </form>
             </div>
           </div>

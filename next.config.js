@@ -62,6 +62,17 @@ const nextConfig = {
   hostname: 'www.amazon.co.za',
 },
 
+{
+  protocol: 'https',
+  hostname: 'www.unsplash.com',
+},
+{
+  protocol: 'https',
+  hostname: 'images.unsplash.com',
+},
+
+
+
 
       // Add more domains as needed
     ],
