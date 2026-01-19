@@ -3,27 +3,45 @@ import React from "react";
 
 const Breadcrumb = ({ title, pages }) => {
   return (
-    <div className="overflow-hidden shadow-breadcrumb pt-[209px] sm:pt-[155px] lg:pt-[95px] xl:pt-[165px]">
-      <div className="border-t border-gray-3">
-        <div className="max-w-[1170px] w-full mx-auto px-4 sm:px-8 xl:px-0 py-5 xl:py-10">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-            <h1 className="font-semibold text-dark text-xl sm:text-2xl xl:text-custom-2">
-              {title}
-            </h1>
+    <div className="overflow-hidden bg-white border-b border-gray-200">
+      <div className="max-w-[1170px] w-full mx-auto px-6 sm:px-8 xl:px-0 py-10 lg:py-12 xl:py-16">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          {/* Main Title */}
+          <h1 className="font-playfair text-4xl md:text-5xl text-gray-900 font-medium tracking-tight">
+            {title}
+          </h1>
 
-            <ul className="flex items-center gap-2">
-              <li className="text-custom-sm hover:text-blue">
-                <Link href="/">Home /</Link>
+          {/* Breadcrumb Path */}
+          <nav aria-label="Breadcrumb">
+            <ul className="flex items-center gap-3 text-sm md:text-base font-montserrat">
+              <li>
+                <Link 
+                  href="/" 
+                  className="text-gray-600 hover:text-velourGold transition-colors duration-300"
+                >
+                  Home
+                </Link>
               </li>
 
-              {pages.length > 0 &&
-                pages.map((page, key) => (
-                  <li className="text-custom-sm last:text-blue capitalize" key={key}>
-                    {page} 
-                  </li>
-                ))}
+              {pages.length > 0 && (
+                <>
+                  <li className="text-gray-400">/</li>
+                  {pages.map((page, key) => (
+                    <li 
+                      key={key} 
+                      className={`capitalize ${
+                        key === pages.length - 1 
+                          ? "text-velourGold font-medium" 
+                          : "text-gray-600 hover:text-velourGold transition-colors duration-300"
+                      }`}
+                    >
+                      {page}
+                    </li>
+                  ))}
+                </>
+              )}
             </ul>
-          </div>
+          </nav>
         </div>
       </div>
     </div>
