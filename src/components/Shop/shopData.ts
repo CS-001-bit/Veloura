@@ -1,10 +1,10 @@
 import { Product } from "@/types/product";
 const shopData: Product[] = [
   {
-    title: "Havit HV-G69 USB Gamepad",
-    reviews: 15,
-    price: 59.0,
-    discountedPrice: 29.0,
+    title: "Noir Elixir Eau de Parfum - 100ml",
+    reviews: 24,
+    price: 1299.0,
+    discountedPrice: 899.0,
     id: 1,
     imgs: {
       thumbnails: [
@@ -18,10 +18,10 @@ const shopData: Product[] = [
     },
   },
   {
-    title: "iPhone 14 Plus , 6/128GB",
-    reviews: 5,
-    price: 899.0,
-    discountedPrice: 99.0,
+    title: "Amber Oud Intense - 50ml",
+    reviews: 18,
+    price: 1899.0,
+    discountedPrice: 1499.0,
     id: 2,
     imgs: {
       thumbnails: [
@@ -35,10 +35,10 @@ const shopData: Product[] = [
     },
   },
   {
-    title: "Apple iMac M1 24-inch 2021",
-    reviews: 5,
-    price: 59.0,
-    discountedPrice: 29.0,
+    title: "Velvet Rose Eau de Toilette - 75ml",
+    reviews: 31,
+    price: 999.0,
+    discountedPrice: 749.0,
     id: 3,
     imgs: {
       thumbnails: [
@@ -52,10 +52,10 @@ const shopData: Product[] = [
     },
   },
   {
-    title: "MacBook Air M1 chip, 8/256GB",
-    reviews: 6,
-    price: 59.0,
-    discountedPrice: 29.0,
+    title: "Midnight Santal Eau de Parfum - 100ml",
+    reviews: 12,
+    price: 1599.0,
+    discountedPrice: 1199.0,
     id: 4,
     imgs: {
       thumbnails: [
@@ -69,10 +69,10 @@ const shopData: Product[] = [
     },
   },
   {
-    title: "Apple Watch Ultra",
-    reviews: 3,
-    price: 99.0,
-    discountedPrice: 29.0,
+    title: "Golden Musk Parfum - 50ml",
+    reviews: 9,
+    price: 2499.0,
+    discountedPrice: 1999.0,
     id: 5,
     imgs: {
       thumbnails: [
@@ -86,10 +86,10 @@ const shopData: Product[] = [
     },
   },
   {
-    title: "Logitech MX Master 3 Mouse",
-    reviews: 15,
-    price: 59.0,
-    discountedPrice: 29.0,
+    title: "Cèdre & Bergamot Eau de Cologne - 100ml",
+    reviews: 22,
+    price: 799.0,
+    discountedPrice: 599.0,
     id: 6,
     imgs: {
       thumbnails: [
@@ -103,10 +103,10 @@ const shopData: Product[] = [
     },
   },
   {
-    title: "Apple iPad Air 5th Gen - 64GB",
-    reviews: 15,
-    price: 59.0,
-    discountedPrice: 29.0,
+    title: "White Jasmine Eau de Parfum - 75ml",
+    reviews: 27,
+    price: 1199.0,
+    discountedPrice: 949.0,
     id: 7,
     imgs: {
       thumbnails: [
@@ -120,10 +120,10 @@ const shopData: Product[] = [
     },
   },
   {
-    title: "Asus RT Dual Band Router",
-    reviews: 15,
-    price: 59.0,
-    discountedPrice: 29.0,
+    title: "Royal Vetiver Eau de Parfum - 100ml",
+    reviews: 14,
+    price: 1799.0,
+    discountedPrice: 1399.0,
     id: 8,
     imgs: {
       thumbnails: [

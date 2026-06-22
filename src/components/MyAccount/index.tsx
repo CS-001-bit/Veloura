@@ -21,13 +21,13 @@ const MyAccount = () => {
     <>
       <Breadcrumb title={"My Account"} pages={["my account"]} />
 
-      <section className="overflow-hidden py-20 bg-gray-2">
+      <section className="overflow-hidden py-20 bg-velourBlack/5">
         <div className="max-w-[1170px] w-full mx-auto px-4 sm:px-8 xl:px-0">
           <div className="flex flex-col xl:flex-row gap-7.5">
             {/* <!--== user dashboard menu start ==--> */}
-            <div className="xl:max-w-[370px] w-full bg-white rounded-xl shadow-1">
+            <div className="xl:max-w-[370px] w-full bg-white rounded-xl shadow-lg border border-velourGold/20">
               <div className="flex xl:flex-col">
-                <div className="hidden lg:flex flex-wrap items-center gap-5 py-6 px-4 sm:px-7.5 xl:px-9 border-r xl:border-r-0 xl:border-b border-gray-3">
+                <div className="hidden lg:flex flex-wrap items-center gap-5 py-6 px-4 sm:px-7.5 xl:px-9 border-r xl:border-r-0 xl:border-b border-velourGold/20">
                   <div className="max-w-[64px] w-full h-16 rounded-full overflow-hidden">
                     <Image
                       src="/images/users/user-04.jpg"
@@ -38,7 +38,7 @@ const MyAccount = () => {
                   </div>
 
                   <div>
-                    <p className="font-medium text-dark mb-0.5">
+                    <p className="font-medium text-gray-900 font-playfair mb-0.5">
                       James Septimus
                     </p>
                     <p className="text-custom-xs">Member Since Sep 2020</p>
@@ -49,10 +49,10 @@ const MyAccount = () => {
                   <div className="flex flex-wrap xl:flex-nowrap xl:flex-col gap-4">
                     <button
                       onClick={() => setActiveTab("dashboard")}
-                      className={`flex items-center rounded-md gap-2.5 py-3 px-4.5 ease-out duration-200 hover:bg-blue hover:text-white ${
+                      className={`flex items-center rounded-md gap-2.5 py-3 px-4.5 ease-out duration-200 hover:bg-velourGold hover:text-white ${
                         activeTab === "dashboard"
-                          ? "text-white bg-blue"
-                          : "text-dark-2 bg-gray-1"
+                          ? "text-white bg-velourGold"
+                          : "text-gray-900 font-playfair-2 bg-gray-1"
                       }`}
                     >
                       <svg
@@ -92,10 +92,10 @@ const MyAccount = () => {
                     </button>
                     <button
                       onClick={() => setActiveTab("orders")}
-                      className={`flex items-center rounded-md gap-2.5 py-3 px-4.5 ease-out duration-200 hover:bg-blue hover:text-white ${
+                      className={`flex items-center rounded-md gap-2.5 py-3 px-4.5 ease-out duration-200 hover:bg-velourGold hover:text-white ${
                         activeTab === "orders"
-                          ? "text-white bg-blue"
-                          : "text-dark-2 bg-gray-1"
+                          ? "text-white bg-velourGold"
+                          : "text-gray-900 font-playfair-2 bg-gray-1"
                       }`}
                     >
                       <svg
@@ -130,10 +130,10 @@ const MyAccount = () => {
 
                     <button
                       onClick={() => setActiveTab("downloads")}
-                      className={`flex items-center rounded-md gap-2.5 py-3 px-4.5 ease-out duration-200 hover:bg-blue hover:text-white ${
+                      className={`flex items-center rounded-md gap-2.5 py-3 px-4.5 ease-out duration-200 hover:bg-velourGold hover:text-white ${
                         activeTab === "downloads"
-                          ? "text-white bg-blue"
-                          : "text-dark-2 bg-gray-1"
+                          ? "text-white bg-velourGold"
+                          : "text-gray-900 font-playfair-2 bg-gray-1"
                       }`}
                     >
                       <svg
@@ -158,10 +158,10 @@ const MyAccount = () => {
 
                     <button
                       onClick={() => setActiveTab("addresses")}
-                      className={`flex items-center rounded-md gap-2.5 py-3 px-4.5 ease-out duration-200 hover:bg-blue hover:text-white ${
+                      className={`flex items-center rounded-md gap-2.5 py-3 px-4.5 ease-out duration-200 hover:bg-velourGold hover:text-white ${
                         activeTab === "addresses"
-                          ? "text-white bg-blue"
-                          : "text-dark-2 bg-gray-1"
+                          ? "text-white bg-velourGold"
+                          : "text-gray-900 font-playfair-2 bg-gray-1"
                       }`}
                     >
                       <svg
@@ -188,10 +188,10 @@ const MyAccount = () => {
 
                     <button
                       onClick={() => setActiveTab("account-details")}
-                      className={`flex items-center rounded-md gap-2.5 py-3 px-4.5 ease-out duration-200 hover:bg-blue hover:text-white ${
+                      className={`flex items-center rounded-md gap-2.5 py-3 px-4.5 ease-out duration-200 hover:bg-velourGold hover:text-white ${
                         activeTab === "account-details"
-                          ? "text-white bg-blue"
-                          : "text-dark-2 bg-gray-1"
+                          ? "text-white bg-velourGold"
+                          : "text-gray-900 font-playfair-2 bg-gray-1"
                       }`}
                     >
                       <svg
@@ -220,10 +220,10 @@ const MyAccount = () => {
 
                     <button
                       onClick={() => setActiveTab("logout")}
-                      className={`flex items-center rounded-md gap-2.5 py-3 px-4.5 ease-out duration-200 hover:bg-blue hover:text-white ${
+                      className={`flex items-center rounded-md gap-2.5 py-3 px-4.5 ease-out duration-200 hover:bg-velourGold hover:text-white ${
                         activeTab === "logout"
-                          ? "text-white bg-blue"
-                          : "text-dark-2 bg-gray-1"
+                          ? "text-white bg-velourGold"
+                          : "text-gray-900 font-playfair-2 bg-gray-1"
                       }`}
                     >
                       <svg
@@ -256,15 +256,15 @@ const MyAccount = () => {
             {/* <!-- dashboard tab content start --> */}
 
             <div
-              className={`xl:max-w-[770px] w-full bg-white rounded-xl shadow-1 py-9.5 px-4 sm:px-7.5 xl:px-10 ${
+              className={`xl:max-w-[770px] w-full bg-white rounded-xl shadow-lg border border-velourGold/20 py-9.5 px-4 sm:px-7.5 xl:px-10 ${
                 activeTab === "dashboard" ? "block" : "hidden"
               }`}
             >
-              <p className="text-dark">
+              <p className="text-gray-900 font-playfair">
                 Hello Annie (not Annie?
                 <a
                   href="#"
-                  className="text-red ease-out duration-200 hover:underline"
+                  className="text-red-700 ease-out duration-200 hover:underline"
                 >
                   Log Out
                 </a>
@@ -281,7 +281,7 @@ const MyAccount = () => {
 
           <!-- orders tab content start --> */}
             <div
-              className={`xl:max-w-[770px] w-full bg-white rounded-xl shadow-1 ${
+              className={`xl:max-w-[770px] w-full bg-white rounded-xl shadow-lg border border-velourGold/20 ${
                 activeTab === "orders" ? "block" : "hidden"
               }`}
             >
@@ -291,7 +291,7 @@ const MyAccount = () => {
 
           <!-- downloads tab content start --> */}
             <div
-              className={`xl:max-w-[770px] w-full bg-white rounded-xl shadow-1 py-9.5 px-4 sm:px-7.5 xl:px-10 ${
+              className={`xl:max-w-[770px] w-full bg-white rounded-xl shadow-lg border border-velourGold/20 py-9.5 px-4 sm:px-7.5 xl:px-10 ${
                 activeTab === "downloads" ? "block" : "hidden"
               }`}
             >
@@ -305,14 +305,14 @@ const MyAccount = () => {
                 activeTab === "addresses" ? "flex" : "hidden"
               }`}
             >
-              <div className="xl:max-w-[370px] w-full bg-white shadow-1 rounded-xl">
-                <div className="flex items-center justify-between py-5 px-4 sm:pl-7.5 sm:pr-6 border-b border-gray-3">
-                  <p className="font-medium text-xl text-dark">
+              <div className="xl:max-w-[370px] w-full bg-white shadow-lg border border-velourGold/20 rounded-xl">
+                <div className="flex items-center justify-between py-5 px-4 sm:pl-7.5 sm:pr-6 border-b border-velourGold/20">
+                  <p className="font-medium text-xl text-gray-900 font-playfair">
                     Shipping Address
                   </p>
 
                   <button
-                    className="text-dark ease-out duration-200 hover:text-blue"
+                    className="text-gray-900 font-playfair ease-out duration-200 hover:text-velourGold"
                     onClick={openAddressModal}
                   >
                     <svg
@@ -437,14 +437,14 @@ const MyAccount = () => {
                 </div>
               </div>
 
-              <div className="xl:max-w-[370px] w-full bg-white shadow-1 rounded-xl">
-                <div className="flex items-center justify-between py-5 px-4 sm:pl-7.5 sm:pr-6 border-b border-gray-3">
-                  <p className="font-medium text-xl text-dark">
+              <div className="xl:max-w-[370px] w-full bg-white shadow-lg border border-velourGold/20 rounded-xl">
+                <div className="flex items-center justify-between py-5 px-4 sm:pl-7.5 sm:pr-6 border-b border-velourGold/20">
+                  <p className="font-medium text-xl text-gray-900 font-playfair">
                     Billing Address
                   </p>
 
                   <button
-                    className="text-dark ease-out duration-200 hover:text-blue"
+                    className="text-gray-900 font-playfair ease-out duration-200 hover:text-velourGold"
                     onClick={openAddressModal}
                   >
                     <svg
@@ -578,11 +578,11 @@ const MyAccount = () => {
               }`}
             >
               <form>
-                <div className="bg-white shadow-1 rounded-xl p-4 sm:p-8.5">
+                <div className="bg-white shadow-lg border border-velourGold/20 rounded-xl p-4 sm:p-8.5">
                   <div className="flex flex-col lg:flex-row gap-5 sm:gap-8 mb-5">
                     <div className="w-full">
                       <label htmlFor="firstName" className="block mb-2.5">
-                        First Name <span className="text-red">*</span>
+                        First Name <span className="text-red-700">*</span>
                       </label>
 
                       <input
@@ -591,13 +591,13 @@ const MyAccount = () => {
                         id="firstName"
                         placeholder="Jhon"
                         value="Jhon"
-                        className="rounded-md border border-gray-3 bg-gray-1 placeholder:text-dark-5 w-full py-2.5 px-5 outline-none duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20"
+                        className="rounded-md border border-velourGold/20 bg-gray-1 placeholder:text-gray-900 font-playfair-5 w-full py-2.5 px-5 outline-none duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20"
                       />
                     </div>
 
                     <div className="w-full">
                       <label htmlFor="lastName" className="block mb-2.5">
-                        Last Name <span className="text-red">*</span>
+                        Last Name <span className="text-red-700">*</span>
                       </label>
 
                       <input
@@ -606,24 +606,24 @@ const MyAccount = () => {
                         id="lastName"
                         placeholder="Deo"
                         value="Deo"
-                        className="rounded-md border border-gray-3 bg-gray-1 placeholder:text-dark-5 w-full py-2.5 px-5 outline-none duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20"
+                        className="rounded-md border border-velourGold/20 bg-gray-1 placeholder:text-gray-900 font-playfair-5 w-full py-2.5 px-5 outline-none duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20"
                       />
                     </div>
                   </div>
 
                   <div className="mb-5">
                     <label htmlFor="countryName" className="block mb-2.5">
-                      Country/ Region <span className="text-red">*</span>
+                      Country/ Region <span className="text-red-700">*</span>
                     </label>
 
                     <div className="relative">
-                      <select className="w-full bg-gray-1 rounded-md border border-gray-3 text-dark-4 py-3 pl-5 pr-9 duration-200 appearance-none outline-none focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20">
+                      <select className="w-full bg-gray-1 rounded-md border border-velourGold/20 text-gray-900 font-playfair-4 py-3 pl-5 pr-9 duration-200 appearance-none outline-none focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20">
                         <option value="0">Australia</option>
                         <option value="1">America</option>
                         <option value="2">England</option>
                       </select>
 
-                      <span className="absolute right-4 top-1/2 -translate-y-1/2 text-dark-4">
+                      <span className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-900 font-playfair-4">
                         <svg
                           className="fill-current"
                           width="16"
@@ -645,7 +645,7 @@ const MyAccount = () => {
 
                   <button
                     type="submit"
-                    className="inline-flex font-medium text-white bg-blue py-3 px-7 rounded-md ease-out duration-200 hover:bg-blue-dark"
+                    className="inline-flex font-medium text-white bg-velourGold py-3 px-7 rounded-md ease-out duration-200 hover:bg-velourGold-dark"
                   >
                     Save Changes
                   </button>
@@ -656,11 +656,11 @@ const MyAccount = () => {
                   section and in reviews
                 </p>
 
-                <p className="font-medium text-xl sm:text-2xl text-dark mb-7">
+                <p className="font-medium text-xl sm:text-2xl text-gray-900 font-playfair mb-7">
                   Password Change
                 </p>
 
-                <div className="bg-white shadow-1 rounded-xl p-4 sm:p-8.5">
+                <div className="bg-white shadow-lg border border-velourGold/20 rounded-xl p-4 sm:p-8.5">
                   <div className="mb-5">
                     <label htmlFor="oldPassword" className="block mb-2.5">
                       Old Password
@@ -671,7 +671,7 @@ const MyAccount = () => {
                       name="oldPassword"
                       id="oldPassword"
                       autoComplete="on"
-                      className="rounded-md border border-gray-3 bg-gray-1 placeholder:text-dark-5 w-full py-2.5 px-5 outline-none duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20"
+                      className="rounded-md border border-velourGold/20 bg-gray-1 placeholder:text-gray-900 font-playfair-5 w-full py-2.5 px-5 outline-none duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20"
                     />
                   </div>
 
@@ -685,7 +685,7 @@ const MyAccount = () => {
                       name="newPassword"
                       id="newPassword"
                       autoComplete="on"
-                      className="rounded-md border border-gray-3 bg-gray-1 placeholder:text-dark-5 w-full py-2.5 px-5 outline-none duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20"
+                      className="rounded-md border border-velourGold/20 bg-gray-1 placeholder:text-gray-900 font-playfair-5 w-full py-2.5 px-5 outline-none duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20"
                     />
                   </div>
 
@@ -702,13 +702,13 @@ const MyAccount = () => {
                       name="confirmNewPassword"
                       id="confirmNewPassword"
                       autoComplete="on"
-                      className="rounded-md border border-gray-3 bg-gray-1 placeholder:text-dark-5 w-full py-2.5 px-5 outline-none duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20"
+                      className="rounded-md border border-velourGold/20 bg-gray-1 placeholder:text-gray-900 font-playfair-5 w-full py-2.5 px-5 outline-none duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20"
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="inline-flex font-medium text-white bg-blue py-3 px-7 rounded-md ease-out duration-200 hover:bg-blue-dark"
+                    className="inline-flex font-medium text-white bg-velourGold py-3 px-7 rounded-md ease-out duration-200 hover:bg-velourGold-dark"
                   >
                     Change Password
                   </button>
@@ -727,3 +727,4 @@ const MyAccount = () => {
 };
 
 export default MyAccount;
+

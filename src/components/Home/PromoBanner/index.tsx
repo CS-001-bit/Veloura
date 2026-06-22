@@ -11,7 +11,7 @@ const PromoBanner = () => {
           <div className="relative z-1 overflow-hidden rounded-2xl bg-gradient-to-br from-velourGold/5 to-white shadow-xl border border-velourGold/10">
             <div className="relative px-8 py-12 lg:py-16">
               <Image
-                src="/images/promo/veloura-small-1.png" // Replace with your discovery set image
+                src="/images/products/product-1-sm-1.png" // Replace with your discovery set image
                 alt="Veloura Discovery Set"
                 width={260}
                 height={260}
@@ -45,7 +45,7 @@ const PromoBanner = () => {
           <div className="relative z-1 overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900 to-black shadow-xl border border-velourGold/10">
             <div className="relative px-8 py-12 lg:py-16">
               <Image
-                src="/images/promo/veloura-small-2.png" // Replace with your limited edition image
+                src="/images/products/product-8-sm-1.png" // Replace with your limited edition image
                 alt="Veloura Limited Edition"
                 width={240}
                 height={240}

@@ -136,7 +136,7 @@ const HeroCarousel = () => {
 
           <div className="flex justify-center lg:justify-end">
             <Image
-              src="https://faunwalk.com/cdn/shop/files/luxury-unisex-perfume-gift-set-4-x-20mls-blvgari-tygar-narciso-rodriguez-for-her-dg-light-blue-gucci-oud-793935.jpg?v=1755340680"
+              src="/images/hero/gift-set.png"
               alt="Veloura Luxury Gift Set"
               width={450}
               height={550}

@@ -23,7 +23,7 @@ const categories = [
   {
     name: "Unisex",
     slug: "unisex",
-    image: "https://amiiraa.co.za/cdn/shop/files/FAD_8442.jpg?v=1746255213&width=1946", // Clean neutral bottle
+    image: "/images/products/product-4-bg-1.png", // Clean neutral bottle
   },
   {
     name: "Arabian / Oud",

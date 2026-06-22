@@ -4,7 +4,6 @@ import Categories from "./Categories";
 import NewArrival from "./NewArrivals";
 import PromoBanner from "./PromoBanner";
 import BestSeller from "./BestSeller";
-import CounDown from "./Countdown";
 import Testimonials from "./Testimonials";
 import Newsletter from "../Common/Newsletter";
 
@@ -13,10 +12,9 @@ const Home = () => {
     <main className="pt-32 sm:pt-40 lg:pt-48 xl:pt-56">  {/* Add this class */}
   <Hero />
   <Categories />
-  <NewArrival />
-  <PromoBanner />
+  {/* <NewArrival /> */}
   <BestSeller />
-  <CounDown />
+  <PromoBanner />
   <Testimonials />
   <Newsletter />
 </main>

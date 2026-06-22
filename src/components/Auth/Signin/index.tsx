@@ -1,8 +1,36 @@
+"use client";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
+import { signIn } from "next-auth/react";
+import { useRouter } from "next/navigation";
 
 const Signin = () => {
+  const router = useRouter();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+    setError("");
+
+    const res = await signIn("credentials", {
+      redirect: false,
+      email,
+      password,
+    });
+
+    if (res?.error) {
+      setError("Invalid email or password. Hint: Try demo@veloura.com / password123");
+      setLoading(false);
+    } else {
+      router.push("/my-account");
+    }
+  };
+
   return (
     <>
       <Breadcrumb title="Sign In" pages={["Sign In"]} />
@@ -19,7 +47,13 @@ const Signin = () => {
               </p>
             </div>
 
-            <form>
+            <form onSubmit={handleSubmit}>
+              {error && (
+                <div className="mb-6 p-4 bg-red-50 border border-red-200 text-red-600 rounded-lg text-sm font-montserrat text-center">
+                  {error}
+                </div>
+              )}
+
               {/* Email Field */}
               <div className="mb-6">
                 <label htmlFor="email" className="block mb-2 font-montserrat text-gray-700">
@@ -28,8 +62,11 @@ const Signin = () => {
                 <input
                   type="email"
                   id="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   placeholder="hello@veloura.com"
                   className="w-full py-3 px-5 rounded-lg border border-gray-300 bg-white placeholder:text-gray-400 text-gray-900 outline-none focus:border-velourGold focus:ring-2 focus:ring-velourGold/20 transition-all duration-300"
+                  required
                 />
               </div>
 
@@ -41,18 +78,22 @@ const Signin = () => {
                 <input
                   type="password"
                   id="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
                   placeholder="••••••••"
                   autoComplete="current-password"
                   className="w-full py-3 px-5 rounded-lg border border-gray-300 bg-white placeholder:text-gray-400 text-gray-900 outline-none focus:border-velourGold focus:ring-2 focus:ring-velourGold/20 transition-all duration-300"
+                  required
                 />
               </div>
 
               {/* Sign In Button */}
               <button
                 type="submit"
-                className="w-full py-4 px-8 font-montserrat font-medium text-velourBlack bg-velourGold rounded-full hover:bg-velourDarkGold transition-all duration-300 shadow-md hover:shadow-lg text-lg"
+                disabled={loading}
+                className="w-full py-4 px-8 font-montserrat font-medium text-velourBlack bg-velourGold rounded-full hover:bg-velourDarkGold transition-all duration-300 shadow-md hover:shadow-lg text-lg disabled:opacity-70 disabled:cursor-not-allowed"
               >
-                Sign In
+                {loading ? "Signing In..." : "Sign In"}
               </button>
 
               {/* Forgot Password */}

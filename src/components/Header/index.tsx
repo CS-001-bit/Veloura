@@ -7,21 +7,18 @@ import Dropdown from "./Dropdown";
 import { useSelector } from "react-redux";
 import { selectTotalPrice } from "@/redux/features/cart-slice";
 import { useCartModalContext } from "@/app/context/CartSidebarModalContext";
+import { useSession, signOut } from "next-auth/react";
 
 const Header = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [navigationOpen, setNavigationOpen] = useState(false);
   const [stickyMenu, setStickyMenu] = useState(false);
   const { openCartModal } = useCartModalContext();
+  const { data: session } = useSession();
 
   const productsInCart = useSelector((state: any) => state.cartReducer.items);
   const totalPrice = useSelector(selectTotalPrice);
-
-
-
-
-
-
+  
   // Sticky menu logic
   const handleStickyMenu = () => {
     setStickyMenu(window.scrollY >= 80);
@@ -108,16 +105,37 @@ const Header = () => {
           {/* Right Icons */}
           <div className="flex items-center gap-8 mt-6 lg:mt-0">
             {/* Account */}
-            <Link
-              href="/signin"
-              className="hidden md:flex items-center gap-3 text-white hover:text-velourGold transition"
-            >
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 12C14.7614 12 17 9.76142 17 7C17 4.23858 14.7614 2 12 2C9.23858 2 7 4.23858 7 7C7 9.76142 9.23858 12 12 12Z" />
-                <path d="M12 14C8.13401 14 4 17.134 4 22H20C20 17.134 15.866 14 12 14Z" />
-              </svg>
-              <span className="font-montserrat text-sm">Account</span>
-            </Link>
+            {session ? (
+              <div className="hidden md:flex items-center gap-4">
+                <Link
+                  href="/my-account"
+                  className="flex items-center gap-2 text-velourGold transition"
+                >
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 12C14.7614 12 17 9.76142 17 7C17 4.23858 14.7614 2 12 2C9.23858 2 7 4.23858 7 7C7 9.76142 9.23858 12 12 12Z" />
+                    <path d="M12 14C8.13401 14 4 17.134 4 22H20C20 17.134 15.866 14 12 14Z" />
+                  </svg>
+                  <span className="font-montserrat text-sm whitespace-nowrap">Hi, Demo</span>
+                </Link>
+                <button
+                  onClick={() => signOut()}
+                  className="text-white/70 hover:text-velourGold transition font-montserrat text-sm whitespace-nowrap"
+                >
+                  Sign Out
+                </button>
+              </div>
+            ) : (
+              <Link
+                href="/signin"
+                className="hidden md:flex items-center gap-3 text-white hover:text-velourGold transition whitespace-nowrap"
+              >
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 12C14.7614 12 17 9.76142 17 7C17 4.23858 14.7614 2 12 2C9.23858 2 7 4.23858 7 7C7 9.76142 9.23858 12 12 12Z" />
+                  <path d="M12 14C8.13401 14 4 17.134 4 22H20C20 17.134 15.866 14 12 14Z" />
+                </svg>
+                <span className="font-montserrat text-sm">Sign In</span>
+              </Link>
+            )}
 
             {/* Cart */}
             <button
@@ -170,19 +188,18 @@ const Header = () => {
                     <path d="M1 1L6 6L11 1" stroke="currentColor" strokeWidth="1.5" />
                   </svg>
                 </span>
-                {/* Dropdown - you can replace with your <Dropdown /> if preferred */}
                 <ul className="absolute top-full left-1/2 -translate-x-1/2 pt-4 hidden group-hover:block">
-                  <div className="bg-velourGray/95 backdrop-blur-md border border-velourGold/30 rounded-2xl py-6 px-10 shadow-2xl">
-                    {categoryOptions.slice(1).map((cat) => (
-                      <li key={cat.value}>
-                        <Link
-                          href={`/category/${cat.value}`}
-                          className="block text-white hover:text-velourGold font-montserrat text-sm py-2 transition"
-                        >
-                          {cat.label}
-                        </Link>
-                      </li>
-                    ))}
+                  <div className="bg-velourBlack/95 backdrop-blur-md border border-velourGold/30 rounded-2xl py-6 px-10 shadow-2xl min-w-[220px]">
+                    <li>
+                      <Link href="/shop-with-sidebar" className="block text-white hover:text-velourGold font-montserrat text-sm py-2 transition whitespace-nowrap">
+                        Shop (With Sidebar)
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/shop-without-sidebar" className="block text-white hover:text-velourGold font-montserrat text-sm py-2 transition whitespace-nowrap">
+                        Shop (Grid View)
+                      </Link>
+                    </li>
                   </div>
                 </ul>
               </li>
@@ -192,8 +209,8 @@ const Header = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-white font-montserrat text-sm uppercase tracking-wider hover:text-velourGold transition">
-                  About
+                <Link href="/my-account" className="text-white font-montserrat text-sm uppercase tracking-wider hover:text-velourGold transition whitespace-nowrap">
+                  My Account
                 </Link>
               </li>
               <li>
